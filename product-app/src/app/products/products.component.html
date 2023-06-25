@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Decription</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pr of products; let i =index ">
+            <th scope="row"> <a [routerLink]="['/details', pr.id]">{{pr.id}} </a></th>
+            <td>{{pr.title}}</td>
+            <td>{{pr.description}}</td>
+            <td>{{pr.price}}</td>
+            <td><img [src]="pr.image" style="height: 25px; width: 25px;"></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
